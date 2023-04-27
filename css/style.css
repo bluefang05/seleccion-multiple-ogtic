@@ -1,0 +1,123 @@
+/* Global styles */
+html {
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+}
+
+/* Game styles */
+#canvas {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+#timer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  background-color: #212529;
+  padding: 0.5rem;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+#timer {
+  color: #f8f9fa;
+  font-size: 3em;
+  font-weight: bold;
+}
+
+
+#portrait {
+  width: 50%;
+  height: 300px; /* set the height to a fixed value */
+  object-fit: cover; /* crop the image to fit the dimensions */
+  border-radius: 5px;
+}
+
+#questionBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+#answerBox {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+}
+
+.answer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 1rem;
+  font-size: 1.2em;
+  border: 0.2em solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.answer:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  #canvas {
+    padding: 1rem;
+  }
+
+  #portrait {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  #timer {
+    font-size: 2em;
+  }
+
+  .answer {
+    font-size: 1em;
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #timer-container {
+    margin-bottom: 1rem;
+  }
+
+  #questionBox {
+    margin-bottom: 1rem;
+  }
+}
